@@ -1,20 +1,27 @@
 import java.util.Scanner;
 
-class Dev {
+class Emp {
     String name;
     int id;
     int Age;
+
+    Emp() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter name");
+        name = sc.next();
+        System.out.println("Enter ID");
+        id = sc.nextInt();
+        System.out.println("Enter Age");
+        Age = sc.nextInt();
+    }
+}
+
+class Dev extends Emp {
     String dg = "Developer";
     float Salary = 600000;
 
     Dev() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter name");
-        name = sc.next();
-        System.out.println("Enter ID");
-        id = sc.nextInt();
-        System.out.println("Enter Age");
-        Age = sc.nextInt();
+
     }
 
     void display() {
@@ -26,21 +33,11 @@ class Dev {
     }
 }
 
-class Clerk {
-    String name;
-    int id;
-    int Age;
+class Clerk extends Emp {
     String dg = "Clerk";
     float Salary = 200000;
 
     Clerk() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter name");
-        name = sc.next();
-        System.out.println("Enter ID");
-        id = sc.nextInt();
-        System.out.println("Enter Age");
-        Age = sc.nextInt();
     }
 
     void display() {
@@ -52,7 +49,7 @@ class Clerk {
     }
 }
 
-public class pgm1 {
+public class modifiedPgm1 {
     public static void main(String args[]) {
         int ch = 0;
 
